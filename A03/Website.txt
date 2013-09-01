@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marek Lopez's ICS 415 A03 Website</title>
+  </head>
+
+</html>
