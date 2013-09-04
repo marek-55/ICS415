@@ -3,7 +3,7 @@ table.layout{border:0px; border-collapse:collapse; width:100%}
 tr.head{height:25%;}
 td.head{border-bottom:1px solid blue; color:darkblue;}
 tr.nav{height:50px}
-td.nav{border-bottom:1px solid blue;}
+td.nav{border-bottom:1px solid blue; font-size:10}
 tr.sumAndCont{height:500px;}
 td.summary{border-right:1px solid blue; width:25%; vertical-align:top;}
 td.content{vertical-align:top;}
