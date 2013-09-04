@@ -1,0 +1,12 @@
+body { background-image:url('Final-Fantasy-XIV-02-HD-Wallpaper.jpg'); font-family:Lucida Console; color:red}
+table.layout{border:0px; border-collapse:collapse; width:100%}
+tr.head{height:25%;}
+td.head{border-bottom:1px solid blue; color:darkblue;}
+tr.nav{height:50px}
+td.nav{border-bottom:1px solid blue;}
+tr.sumAndCont{height:500px;}
+td.summary{border-right:1px solid blue; width:25%; vertical-align:top;}
+td.content{vertical-align:top;}
+tr.foot{height:50px}
+td.foot{border-top:1px solid blue; text-align:center; color:red}
+

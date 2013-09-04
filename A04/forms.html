@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marek Lopez's ICS 415 A03 Website</title>
+	<link rel="stylesheet" href="tableLayoutStyles.css" type="text/css" />
+  </head>
+  <body>
+    <table class="layout">
+	  <thead>
+	    <tr class="head">
+	      <td class="head" colspan=2>
+		    <h1>Marek Lopez ICS 415 A04</h1>
+		   </td>
+	    </tr>
+	  </thead>
+ 	  <tr class="nav">
+	    <td class="nav" colspan=2>
+	       <font size="4"><a href="index.html">Home</a> <a href="forms.html">Forms</a></size>
+	     </td>
+	  </tr>
+	  
+	  <tr class="sumAndCont">
+          <!-- Begin left side cell -->	  
+	      <td class="summary">
+		    <b>Summary</b>
+			</br>This page demonstrates the use of forms.
+		  </td>
+		  <!-- End left side cell -->
+		  <!-- Begin right cell -->
+		  <td class="content">
+		    <b><font size="6">Forms Page</font></b>
+			<!-- Forms -->			
+			
+			<form name="testForm" action="forms.html" method="get">
+			 Please enter today's date:</br>
+			 <input type="date" name="date"></br>
+			 Enter the date and time you desire:</br>
+			 <input type="datetime" name="datetime"></br>
+			 Please enter your email for spam:</br>
+			 <input type="email" name="email" size="40"></br>
+			 Select your birth month:</br>
+			 <input type="month" name="month"></br>
+			 Select your favorite number:</br>
+			 <input type="number" name="number"></br>
+			 What is your favorite color?</br>
+			 <input id="color" type="color" name="color"></br>
+			 Slide the range from -6 to 6:</br>
+			 <input type="range" name="range" min="-6" max="6" step="3" value="-4"></br>
+			 Search for something?</br>
+			 <input type="search" name="search" size="40" placeholder="Remember, you are being monitored..."></br>
+			 Enter a url for fun:</br>
+			 <input type="url" name="url" size="40" placeholder="http://"></br>
+			 Confirm your decisions here:</br>
+			 <input type="submit" value="Submit">
+			</form>
+		  </td><!-- End right cell -->
+	  </tr>
+	  <!-- End of table row -->
+	  <!-- Bottom of the page -->
+	  <tfoot>
+	    <tr class="foot">
+	      <td class="foot" colspan=2>
+		    Copyright (C) Marek Lopez
+		  </td>
+	    </tr>
+	  </tfoot>
+	  
+	</table>
+  </body>
+</html>
