@@ -46,6 +46,5 @@ function externalJavaScriptList(){
 		text += "The scripts in this page are:";
 		text += scripts + "</p>";
 		$("#div2").append(text);
-		alert(scripts);
 	});
 }
