@@ -40,7 +40,12 @@ function appendCount(tag, data, appendTo){
 function externalJavaScriptList(){
 	var userInput = $("#div1").find("input[name='url']").val();
 	$.get(userInput, function(data){
-		var scripts = $(data).find("head").attr("script");
+		$("#jslist").remove();
+		var text = "<p id='jslist'>";
+		var scripts = $(data).find("script").attr("src");
+		text += "The scripts in this page are:";
+		text += scripts + "</p>";
+		$("#div2").append(text);
 		alert(scripts);
 	});
 }
