@@ -23,7 +23,7 @@ fclose($readHandle);
 <body>
 <form name='addComment' action="<?php echo $_SERVER['PHP_SELF'];?>" method='post'>
 	 Enter a comment:<input type='text' name='comment' autofocus="autofocus"/>
-	 <input type='submit' value='Submit comment' name='submit_button'/>
+	 <input type='submit' value='Submit comment' />
 </form>
 </body>
 </html>
