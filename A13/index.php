@@ -11,7 +11,7 @@ if(isset($_POST['comment'])){
 echo "Previous comments:</br>";
 $readHandle = fopen("sample.txt",'r');
 while ($line = fgets($readHandle)){
-	 echo "$line</br>";
+	 echo "$line";
 }
 fclose($readHandle);
 ?>
