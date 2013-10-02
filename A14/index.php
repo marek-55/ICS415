@@ -1,9 +1,11 @@
 <?php
 
 $con = connectToDB();
-//$tblTestSQL = "SHOW TABLES LIKE 'comments';"
+
+// Check if table already exists
 $tblTest      = mysqli_query($con, "SHOW TABLES LIKE 'comments'");
 if($tblTest->num_rows == 0){
+	 // Table doesn't exist, so create it
 	 echo "Comments does not exist</br>";
 	 $res = mysqli_query($con, "CREATE TABLE Comments(ID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(ID), Comment VARCHAR(255))");
 	 if(!$res){
@@ -13,8 +15,9 @@ if($tblTest->num_rows == 0){
 	 }
 }
 
+// Add a new comment, if the user entered one
 if(isset($_POST['comment'])){
-		if(!ctype_space($_POST['comment'])){		 
+		if(!ctype_space($_POST['comment'])){ // Do not add comments that are only white space		 
 		 $res = mysqli_query($con, "INSERT INTO Comments VALUES(null, '$_POST[comment]')");
 		 if(!$res){
 			 echo "Could not add comment to database." . mysqli_error($con) . "</br>";
@@ -25,6 +28,7 @@ if(isset($_POST['comment'])){
 
 echo "Previous comments:</br>";
 $comments = mysqli_query($con, "SELECT * FROM Comments");
+// Create list then add comments from the database
 echo "<ol>";
 while ($row = $comments->fetch_assoc()){
 	 echo "<li>" . $row['Comment'] . "</li>";
@@ -33,8 +37,7 @@ echo "</ol>";
 $comments->free();
 
 function connectToDB(){
-	$con = new mysqli("localhost", "root", "W4rr10r0fL1ght", "commentDB");
-	//echo $con->connect_errno;//debugging purposes
+	$con = new mysqli("localhost", "root", "", "commentDB");
 	if ($con->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $con->connect_errno . ") " . $con->connect_error;
 	}
